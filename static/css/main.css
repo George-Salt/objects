@@ -23,13 +23,11 @@ body {
   background: black;
   color: white;
   font-family: "Loos Ext", sans-serif;
-  overflow: hidden;
-  height: 100vh;
 }
 
 main {
-  margin: 10px;
-  height: 100vh;
+  margin: 15px;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,7 +91,7 @@ main .card .about .cost {
 main .button {
   text-align: center;
   padding: 15px 0;
-  width: calc(100% - 20px);
+  width: calc(100% - 30px);
   background: white;
   color: black;
   font-weight: 900;
