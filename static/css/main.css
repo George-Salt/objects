@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "Loos Ext";
+  src:
+    url("../font/loos-extended/black.otf");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Loos Ext";
+  src:
+    url("../font/loos-extended/regular.otf");
+  font-weight: 400;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background: black;
+  color: white;
+  font-family: "Loos Ext", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+
+main {
+  margin: 10px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+main .card {
+  text-align: center;
+  color: black;
+  background: #cccccc;
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  border-radius: 25px;
+}
+
+main .card.legendary {
+  background-image: linear-gradient(-30deg, #a888ff, #ffa9fe, #ffc688);
+}
+
+main .card.rare {
+  background: #a9f2ff;
+}
+
+main .card.epic {
+  background: #ffe1a9;
+}
+
+main .card img {
+  width: 200px;
+  image-rendering: pixelated;
+}
+
+main .card .about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+main .card .about .name {
+  margin-bottom: -10px;
+}
+
+main .card .about .rarity {
+  font-size: 12px;
+  padding: 3px 10px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+main .card .about .cost {
+  font-size: 30px;
+}
+
+main .button {
+  text-align: center;
+  padding: 15px 0;
+  width: calc(100% - 20px);
+  background: white;
+  color: black;
+  font-weight: 900;
+  border-radius: 15px;
+}

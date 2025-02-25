@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Objects</title>
+
+  <link href="static/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <div class="card">
+      <img src="static/img/pixel-fantasy/fc2.png">
+      <div class="about">
+        <h1 class="name">Предмет</h1>
+        <b class="rarity"></b>
+        <p class="description"></p>
+        <b class="cost"></b>
+      </div>
+    </div>
+
+    <div class="button">Обменять</div>
+  </main>
+
+  <script>
+    const items = [
+      {
+        name: "Ваза",
+        rarity: "common",
+        description: "Простая ваза для цветов.",
+        cost: 50,
+        image: "fc1.png"
+      },
+      {
+        name: "Кольцо",
+        rarity: "rare",
+        description: "Мистическое кольцо с неизвестными силами.",
+        cost: 1000,
+        image: "fc2.png"
+      },
+      {
+        name: "Меч",
+        rarity: "epic",
+        description: "Легендарный меч, созданный в древние времена.",
+        cost: 5000,
+        image: "fc4.png"
+      },
+      {
+        name: "Броня",
+        rarity: "rare",
+        description: "Железки павшего воина.",
+        cost: 800,
+        image: "fc5.png"
+      },
+      {
+        name: "Сундук",
+        rarity: "legendary",
+        description: "Сокровищница, полная золота и драгоценностей.",
+        cost: 20000,
+        image: "fc6.png"
+      },
+      {
+        name: "Перо",
+        rarity: "common",
+        description: "Холодное оружие Пушкина.",
+        cost: 30,
+        image: "fc7.png"
+      },
+      {
+        name: "Карта клада",
+        rarity: "epic",
+        description: "Клад обозначен на карте крестиком.",
+        cost: 7000,
+        image: "fc8.png"
+      },
+      {
+        name: "Книга",
+        rarity: "rare",
+        description: "Древняя книга, содержащая запретные знания.",
+        cost: 1500,
+        image: "fc9.png"
+      },
+      {
+        name: "Звезда",
+        rarity: "legendary",
+        description: "Сбежала из другой галактики.",
+        cost: 50000,
+        image: "fc12.png"
+      },
+      {
+        name: "Вопрос",
+        rarity: "common",
+        description: "Загадочный знак вопроса.",
+        cost: 40,
+        image: "fc13.png"
+      },
+      {
+        name: "Кубок",
+        rarity: "common",
+        description: "Его заберет только победитель.",
+        cost: 35,
+        image: "fc15.png"
+      },
+      {
+        name: "Домик",
+        rarity: "common",
+        description: "Маленький уютный домик.",
+        cost: 70,
+        image: "fc16.png"
+      },
+      {
+        name: "Волна",
+        rarity: "common",
+        description: "Скоро это цунами накроет и тебя.",
+        cost: 25,
+        image: "fc20.png"
+      },
+      {
+        name: "Пальма",
+        rarity: "epic",
+        description: "Твое собственное дерево с кокосами.",
+        cost: 8000,
+        image: "fc22.png"
+      },
+      {
+        name: "Вагонетка",
+        rarity: "common",
+        description: "Возит обычные камни туда-сюда.",
+        cost: 10,
+        image: "fc25.png"
+      },
+      {
+        name: "Кристалл",
+        rarity: "legendary",
+        description: "Очень дорогое украшение коллекции.",
+        cost: 75000,
+        image: "fc26.png"
+      },
+      {
+        name: "Дерево",
+        rarity: "common",
+        description: "Этот лес - твой.",
+        cost: 45,
+        image: "fc32.png"
+      },
+      {
+        name: "Мельница",
+        rarity: "common",
+        description: "Отчаянно мелет муку.",
+        cost: 55,
+        image: "fc33.png"
+      },
+      {
+        name: "Башня",
+        rarity: "rare",
+        description: "Сторожевое сооружение.",
+        cost: 500,
+        image: "fc34.png"
+      },
+      {
+        name: "Домик 1.1",
+        rarity: "common",
+        description: "Мой дом - моя крепость.",
+        cost: 40,
+        image: "fc35.png"
+      },
+      {
+        name: "Портал",
+        rarity: "epic",
+        description: "Очень похож на портал в Нижний Мир.",
+        cost: 8000,
+        image: "fc36.png"
+      },
+      {
+        name: "Наковальня",
+        rarity: "common",
+        description: "Прочный стол для работы с металлом.",
+        cost: 30,
+        image: "fc39.png"
+      },
+      {
+        name: "Палатка",
+        rarity: "common",
+        description: "Идеальное место для ночевки.",
+        cost: 40,
+        image: "fc40.png"
+      },
+      {
+        name: "Старое дерево",
+        rarity: "rare",
+        description: "Оно уже многое повидало.",
+        cost: 1000,
+        image: "fc46.png"
+      },
+    ];
+
+    const cardElement = document.querySelector("main .card");
+    const cardNameElement = document.querySelector("main .card .name");
+    const cardDescriptionElement = document.querySelector("main .card .description");
+    const cardRarityElement = document.querySelector("main .card .rarity");
+    const cardCostElement = document.querySelector("main .card .cost");
+    const cardImageElement = document.querySelector("main .card img");
+
+    const randomItem = items[Math.floor(Math.random() * items.length)];
+
+    cardElement.classList.add(randomItem.rarity);
+    cardNameElement.textContent = randomItem.name;
+    cardDescriptionElement.textContent = randomItem.description;
+    cardRarityElement.textContent = {"common": "обычный", "rare": "редкий", "epic": "эпический", "legendary": "легендарный"}[randomItem.rarity];
+    cardCostElement.textContent = `${randomItem.cost} ©`;
+    cardImageElement.src = `static/img/pixel-fantasy/${randomItem.image}`;
+  </script>
+</body>
+
+</html>
