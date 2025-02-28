@@ -25,9 +25,30 @@ body {
   font-family: "Loos Ext", sans-serif;
 }
 
-main {
-  margin: 15px;
-  height: 95vh;
+
+header {
+  padding: 10px 10px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+
+/* header .name {
+  border-bottom: 2px solid #a888ff;
+} */
+
+header .money {
+  padding: 3px 15px 2px 15px;
+  background: white;
+  color: black;
+  font-weight: 900;
+  border-radius: 15px;
+}
+
+
+main .action {
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +61,7 @@ main .card {
   color: black;
   background: #cccccc;
   width: 100%;
-  height: 75%;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,11 +75,11 @@ main .card.legendary {
 }
 
 main .card.rare {
-  background: #a9f2ff;
+  background: lightskyblue;
 }
 
 main .card.epic {
-  background: #ffe1a9;
+  background: lightcoral;
 }
 
 main .card img {
@@ -88,12 +109,66 @@ main .card .about .cost {
   font-size: 30px;
 }
 
+main .buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 main .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 15px 0;
-  width: calc(100% - 30px);
-  background: white;
-  color: black;
   font-weight: 900;
   border-radius: 15px;
+}
+
+main .button.big {
+  background: white;
+  color: black;
+  height: 50px;
+  width: calc(100% - 50px - 10px);
+}
+
+main .button.small {
+  background: #1f1f1f;
+  height: 46px;
+  width: 46px;
+  border: 2px solid #2f2f2f;
+}
+
+
+main .gallery {
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+main .gallery .stored {
+  background: #cccccc;
+  color: black;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 15px;
+}
+
+main .gallery .stored img {
+  width: 40px;
+}
+
+main .gallery .stored.legendary {
+  background-image: linear-gradient(-30deg, #a888ff, #ffa9fe, #ffc688);
+}
+
+main .gallery .stored.rare {
+  background: lightskyblue;
+}
+
+main .gallery .stored.epic {
+  background: lightcoral;
 }

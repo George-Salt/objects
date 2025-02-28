@@ -11,18 +11,33 @@
 </head>
 
 <body>
+  <header>
+    <p class="name">GSXLT Objects</p>
+
+    <div class="status">
+      <p class="money">0</p>
+    </div>
+  </header>
+
   <main>
-    <div class="card">
-      <img src="static/img/pixel-fantasy/fc2.png">
-      <div class="about">
-        <h1 class="name">Предмет</h1>
-        <b class="rarity"></b>
-        <p class="description"></p>
-        <b class="cost"></b>
+    <div class="action">
+      <div class="card">
+        <img src="static/img/pixel-fantasy/fc2.png">
+        <div class="about">
+          <h1 class="name">Предмет</h1>
+          <b class="rarity"></b>
+          <p class="description"></p>
+          <b class="cost"></b>
+        </div>
+      </div>
+  
+      <div class="buttons">
+        <div class="button big" onclick="openGallery()">В галерею</div>
+        <div class="button small">🔗</div>
       </div>
     </div>
 
-    <div class="button">Обменять</div>
+    <div class="gallery"></div>
   </main>
 
   <script>
@@ -195,7 +210,283 @@
         cost: 1000,
         image: "fc46.png"
       },
+      {
+        name: "Ягода",
+        rarity: "common",
+        description: "Сладкая и полезная ягода.",
+        cost: 20,
+        image: "fc433.png"
+      },
+      {
+        name: "Томат",
+        rarity: "common",
+        description: "Свежий томат для салата.",
+        cost: 30,
+        image: "fc434.png"
+      },
+      {
+        name: "Черника",
+        rarity: "common",
+        description: "Маленькая и вкусная черника.",
+        cost: 25,
+        image: "fc435.png"
+      },
+      {
+        name: "Малина",
+        rarity: "common",
+        description: "Сладкая малинка для десертов.",
+        cost: 35,
+        image: "fc436.png"
+      },
+      {
+        name: "Вишня",
+        rarity: "common",
+        description: "Сладкая вишня для десертов.",
+        cost: 40,
+        image: "fc437.png"
+      },
+      {
+        name: "Лук",
+        rarity: "common",
+        description: "Ароматный лук для приготовления пищи.",
+        cost: 30,
+        image: "fc439.png"
+      },
+      {
+        name: "Морковь",
+        rarity: "common",
+        description: "Полезная морковь для здоровья.",
+        cost: 20,
+        image: "fc441.png"
+      },
+      {
+        name: "Картофель",
+        rarity: "common",
+        description: "Надёжный картофель для гарнира.",
+        cost: 25,
+        image: "fc442.png"
+      },
+      {
+        name: "Виноград",
+        rarity: "common",
+        description: "Сладкий виноград для перекуса.",
+        cost: 35,
+        image: "fc443.png"
+      },
+      {
+        name: "Арбуз",
+        rarity: "common",
+        description: "Хрустящая летняя ягодка.",
+        cost: 30,
+        image: "fc445.png"
+      },
+      {
+        name: "Апельсин",
+        rarity: "common",
+        description: "Сочный апельсин для витаминов.",
+        cost: 40,
+        image: "fc446.png"
+      },
+      {
+        name: "Баклажан",
+        rarity: "common",
+        description: "Здоровый баклажан для диеты.",
+        cost: 35,
+        image: "fc447.png"
+      },
+      {
+        name: "Кукуруза",
+        rarity: "common",
+        description: "Отличная добавка в блюда.",
+        cost: 30,
+        image: "fc448.png"
+      },
+      {
+        name: "О Боги",
+        rarity: "legendary",
+        description: "Высшая степень власти, только для избранных!",
+        cost: 10000000,
+        image: "fc1085.png"
+      },
+      {
+        name: "Меч Золотой",
+        rarity: "rare",
+        description: "Сияющий золотой меч.",
+        cost: 1500,
+        image: "fc1681.png"
+      },
+      {
+        name: "Кинжал Теней",
+        rarity: "rare",
+        description: "Мистический кинжал теней.",
+        cost: 3000,
+        image: "fc1682.png"
+      },
+      {
+        name: "Меч Электрический",
+        rarity: "rare",
+        description: "Мощный меч с электрическими разрядами.",
+        cost: 4000,
+        image: "fc1683.png"
+      },
+      {
+        name: "Меч Ледяной",
+        rarity: "rare",
+        description: "Холодный ледяной меч.",
+        cost: 4500,
+        image: "fc1684.png"
+      },
+      {
+        name: "Меч Ветра",
+        rarity: "rare",
+        description: "Меч, создающий вихри ветра.",
+        cost: 5500,
+        image: "fc1686.png"
+      },
+      {
+        name: "Меч Света",
+        rarity: "rare",
+        description: "Меч, испускающий яркий свет.",
+        cost: 7000,
+        image: "fc1687.png"
+      },
+      {
+        name: "Меч Жизни",
+        rarity: "epic",
+        description: "Меч, дарующий жизнь и исцеление.",
+        cost: 10000,
+        image: "fc1690.png"
+      },
+      {
+        name: "Меч Магический",
+        rarity: "epic",
+        description: "Магический меч с невероятными способностями.",
+        cost: 12000,
+        image: "fc1691.png"
+      },
+      {
+        name: "Меч Дракона",
+        rarity: "epic",
+        description: "Меч, созданный из чешуи дракона.",
+        cost: 15000,
+        image: "fc1692.png"
+      },
+      {
+        name: "Меч Феникса",
+        rarity: "epic",
+        description: "Меч, символизирующий возрождение.",
+        cost: 18000,
+        image: "fc1693.png"
+      },
+      {
+        name: "Меч Грома",
+        rarity: "epic",
+        description: "Меч, вызывающий грозовые разряды.",
+        cost: 20000,
+        image: "fc1694.png"
+      },
+      {
+        name: "Меч Легенд",
+        rarity: "legendary",
+        description: "Легендарный меч, известный своими подвигами.",
+        cost: 25000,
+        image: "fc1695.png"
+      },
+      {
+        name: "Меч Бессмертия",
+        rarity: "legendary",
+        description: "Меч, дающий бессмертие своему владельцу.",
+        cost: 300000,
+        image: "fc1696.png"
+      },
+      {
+        name: "Меч Небесный",
+        rarity: "legendary",
+        description: "Меч, спустившийся с небес.",
+        cost: 40000,
+        image: "fc1698.png"
+      },
+      {
+        name: "Меч Огня",
+        rarity: "epic",
+        description: "Меч, пылающий вечным пламенем.",
+        cost: 55000,
+        image: "fc1701.png"
+      },
+      {
+        name: "Меч Воздуха",
+        rarity: "epic",
+        description: "Меч, управляющий ветрами.",
+        cost: 60000,
+        image: "fc1702.png"
+      },
+      {
+        name: "Меч Солнца",
+        rarity: "epic",
+        description: "Меч, освещённый солнечным светом.",
+        cost: 65000,
+        image: "fc1703.png"
+      },
+      {
+        name: "Меч Луны",
+        rarity: "legendary",
+        description: "Меч, отражающий лунный свет.",
+        cost: 70000,
+        image: "fc1704.png"
+      }
     ];
+
+    function openGallery() {
+      const actionElement = document.querySelector("main .action");
+      const galleryElement = document.querySelector("main .gallery");
+
+      actionElement.style.display = "none";
+      galleryElement.style.display = "flex";
+    };
+
+    function getCurrentDate() {
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, "0");
+      const day = String(now.getDate()).padStart(2, "0");
+      return `${year}-${month}-${day}`;
+    }
+
+    function getRandomItemIndex(items) {
+      return Math.floor(Math.random() * items.length);
+    }
+
+    function selectAndSaveRandomItem(items) {
+      const currentDate = getCurrentDate();
+      const storedItem = localStorage.getItem(currentDate);
+      const objects = JSON.parse(localStorage.getItem("objects")) || [];
+      let money = localStorage.getItem("money") || 0;
+      let selectedItem = {};
+
+      if (storedItem) {
+        selectedItem = JSON.parse(storedItem);
+      } else {
+        const randomIndex = getRandomItemIndex(items);
+        selectedItem = items[randomIndex];
+        localStorage.setItem(currentDate, JSON.stringify(selectedItem));
+
+        objects.push(selectedItem);
+        localStorage.setItem("objects", JSON.stringify(objects));
+
+        money += selectedItem.cost
+        localStorage.setItem("money", money);
+      }
+
+      const galleryElement = document.querySelector("main .gallery");
+      objects.forEach(element => {
+        galleryElement.innerHTML += `<div class="stored ${element.rarity}"><img src="static/img/pixel-fantasy/${element.image}"><div class="about"><b class="name">${element.name}</b><p class="rarity">${element.cost} ©</p></div></div>`
+      });
+
+      const moneyElement = document.querySelector("header .money");
+      moneyElement.textContent = money;
+
+      return selectedItem;
+    }
 
     const cardElement = document.querySelector("main .card");
     const cardNameElement = document.querySelector("main .card .name");
@@ -204,12 +495,12 @@
     const cardCostElement = document.querySelector("main .card .cost");
     const cardImageElement = document.querySelector("main .card img");
 
-    const randomItem = items[Math.floor(Math.random() * items.length)];
+    const randomItem = selectAndSaveRandomItem(items);
 
     cardElement.classList.add(randomItem.rarity);
     cardNameElement.textContent = randomItem.name;
     cardDescriptionElement.textContent = randomItem.description;
-    cardRarityElement.textContent = {"common": "обычный", "rare": "редкий", "epic": "эпический", "legendary": "легендарный"}[randomItem.rarity];
+    cardRarityElement.textContent = { "common": "обычный", "rare": "редкий", "epic": "эпический", "legendary": "легендарный" }[randomItem.rarity];
     cardCostElement.textContent = `${randomItem.cost} ©`;
     cardImageElement.src = `static/img/pixel-fantasy/${randomItem.image}`;
   </script>
