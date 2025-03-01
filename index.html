@@ -460,7 +460,7 @@
       const currentDate = getCurrentDate();
       const storedItem = localStorage.getItem(currentDate);
       const objects = JSON.parse(localStorage.getItem("objects")) || [];
-      let money = localStorage.getItem("money") || 0;
+      let money = Number(localStorage.getItem("money")) || 0;
       let selectedItem = {};
 
       if (storedItem) {
@@ -473,7 +473,7 @@
         objects.push(selectedItem);
         localStorage.setItem("objects", JSON.stringify(objects));
 
-        money += selectedItem.cost
+        money += Number(selectedItem.cost)
         localStorage.setItem("money", money);
       }
 
